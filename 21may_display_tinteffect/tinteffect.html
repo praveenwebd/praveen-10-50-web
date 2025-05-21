@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: skyblue;
+        }
+        
+        .imgbox {
+            height: 400px;
+            display: flex;
+            width: 300px;
+            position: relative;
+            border: 2px solid black;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: 0.8s all;
+            top: 0;
+            left: 0;
+        }
+
+        .tint {
+            height: 400px;
+            width: 300px;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.151);
+            transition: 1s all;
+            z-index: -1;
+        }
+        
+        .text {
+            height: 400px;
+            width: 300px;
+            border: 2xp solid black;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0px;
+            font-weight: bolder;
+            transition: 1s all;
+            z-index: -1;
+        }
+        a{
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .imgbox:hover img {
+            height: 120%;
+            width: 120%;
+            top: -30px;
+            left: -30px;
+        }
+
+        .imgbox:hover .tint {
+            z-index: 1;
+        }
+
+        .imgbox:hover .text {
+            z-index: 1;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="imgbox">
+            <img src="1-SM687778.jpg" alt="">
+            <div class="tint"></div>
+            <div class="text"><a href="#">Visit Here</a></div>
+        </div>
+    </div>
+</body>
+
+</html>
