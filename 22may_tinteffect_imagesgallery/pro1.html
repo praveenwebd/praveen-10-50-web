@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+           height: 390px;
+            width: 260px;
+            border: 2px solid black;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box {
+            height: 390px;
+            width: 260px;
+            background-image: url(1-SM687778.jpg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: all 1s;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .container:hover .box {
+            height: 490px;
+            width: 360px;
+            top: -50px;
+            left: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

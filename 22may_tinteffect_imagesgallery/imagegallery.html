@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .container {
+            width: 100vw;
+            font-family: sans-serif;
+
+        }
+
+        .mainheader {
+            position: relative;
+            width: 100%;
+
+        }
+
+        .header {
+            width: 100%;
+            position: relative;
+            position: sticky;
+            top: 0;
+            
+        }
+        
+        
+        .box1 {
+            height: 70px;
+            width: 100%;
+            background: linear-gradient(rgba(196, 238, 255, 0.903), white);
+            display: flex;
+        }
+
+        .categories {
+            width: 34%;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            padding-left: 55px;
+            font-weight: bolder;
+        }
+
+        .categories a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .logo {
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 33%;
+
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .logo::before {
+            content: "";
+            position: absolute;
+            border: 3px solid black;
+            height: 3px;
+            width: 6px;
+            margin-left: -12.78%;
+            margin-top: -1.9%;
+            rotate: 40deg;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .logo::after {
+            content: "Gallery";
+            transform: scaleY(100%);
+            margin-left: -58%;
+            color: grey;
+            cursor: pointer;
+        }
+
+        .rightcontent {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            width: 33%;
+            font-weight: bold;
+
+        }
+
+        .box1 input {
+            font-size: 15px;
+            width: 20%;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+            border-radius: 50px;
+            border: none;
+            margin-left: 5px;
+            margin-right: 20px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            cursor: pointer;
+        }
+
+        .box1 input:hover {
+            background-color: rgb(97, 92, 92);
+            border: 5px solid rgb(220, 200, 200);
+        }
+
+        .box2 {
+
+            background-color: rgb(231, 238, 247);
+            height: 140px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+
+
+        .searchbar {
+
+            width: 67.8%;
+            height: 70px;
+            border: 1px solid grey;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .searchbar input {
+            border: none;
+            width: 60%;
+            height: 80%;
+            font-size: 20px;
+        }
+
+        .searchbar img {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .divider-search-bar {
+            background-color: rgb(205, 205, 205);
+            height: 70%;
+            width: 3px;
+        }
+
+        .searchbartext {
+            padding-left: 10px;
+            margin-right: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .searchbyimages {
+            height: 40px;
+            width: 100px;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .searchbyimages img {
+            height: 30px;
+            width: 30px;
+        }
+
+
+        .box3 {
+            width: 100%;
+        }
+
+        .box3 img {
+            width: 100%;
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        .main .text {
+            height: 80px;
+            font-size: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+
+            <div class="box1">
+                <div class="categories"><a href="#">Browse Categories</a></div>
+                <div class="logo"><a href="#">images</a></div>
+                <div class="rightcontent"><a href="#">Pricing</a>
+                    <input type="button" value="Sign In" onclick="">
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="box2">
+            <div class="searchbar">
+
+                <span><img src="images/searchbar/download.png" alt=""></span>
+                <input type="search" name="" id="" placeholder="Search the largest collection of Indian images">
+                <div class="divider-search-bar"></div>
+                <div class="searchbartext">Images</div>
+                <div class="divider-search-bar"></div>
+                <div class="searchbyimages">
+                    <img src="images/searchbar/images.png" alt=""><br>
+                    Search by image
+                </div>
+
+            </div>
+        </div>
+
+        <div class="box3">
+            <img src="images/header/1747897983735item.jpg" alt="">
+
+        </div>
+
+
+
+        <div class="body">
+            <div class="main">
+                <div class="text">Popular Collections</div>
+                
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
