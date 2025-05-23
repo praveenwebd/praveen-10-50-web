@@ -9,13 +9,13 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
 
         .container {
-            width: 100vw;
+            width: 100%;
             font-family: sans-serif;
-
         }
 
         .mainheader {
@@ -29,14 +29,16 @@
             position: relative;
             position: sticky;
             top: 0;
-            
+            z-index: 2;
+
+
         }
-        
-        
+
+
         .box1 {
             height: 70px;
             width: 100%;
-            background: linear-gradient(rgba(196, 238, 255, 0.903), white);
+            background: linear-gradient(rgb(196, 238, 255), white);
             display: flex;
         }
 
@@ -129,7 +131,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
         }
 
 
@@ -191,16 +193,138 @@
             width: 100%;
         }
 
-        .main {
-            width: 100%;
-        }
-
-        .main .text {
+        .text {
             height: 80px;
             font-size: 23px;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .body {
+            width: 100%;
+        }
+        
+        .main {
+            width: 100%;
+            padding: 22px;
+            display: inline-block;
+        }
+
+        .line1,.line2 {
+            display: flex;
+            height: 370px;
+            width: 100%;
+        }
+
+        .imgtext {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            z-index: -1;
+            transition: .5s all;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .tint {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.378);
+            height: 100%;
+            width: 100%;
+            z-index: -2;
+            transition: 0.5s all;
+        }
+
+        
+        .b1,
+        .b2,
+        .b3,
+        .b4,
+        .b5,
+        .b6
+         {
+            height: 362px;
+            width: 362px;
+            overflow: hidden;
+            position: relative;
+            margin: 4px;
+            display: inline-block;
+
+        }
+
+        .b3height {height: 544px;}
+        .b6height {height: 242px;}
+
+        .conceptsideas,
+        .lifestyleseniors,
+        .beauty,
+        .businesscorporate,
+        .lifestylefamilies,
+        .vacationsholidays
+         {
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            transition: 0.5s all;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: .5s all;
+        }
+
+        .b1img {background-image: url(images/bodyimg/Concept-and-Ideas/Concept-and-Ideas.jpg);}
+
+        .b2img {background-image: url(images/bodyimg/Lifestyle-Seniors/Lifestyle-Seniors.jpg);}
+
+        .b3img {background-image: url(images/bodyimg/Beauty/Beauty.jpg);}
+
+        .b4img {background-image: url(images/bodyimg/Business-and-Corporate/Business-and-Corporate.jpg);}
+
+        .b5img {background-image: url(images/bodyimg/Lifestyle-Families/Lifestyle-Families.jpg);}
+
+        .b6img {background-image: url(images/bodyimg/Vacation-and-Holidays/Vacation-and-Holidays.jpg);}
+
+
+
+
+        .b1:hover .b1img,
+        .b2:hover .b2img,
+        .b3:hover .b3img,
+        .b4:hover .b4img,
+        .b5:hover .b5img,
+        .b6:hover .b6img
+         {
+            height: 412px;
+            width: 412px;
+            top: -25px;
+            left: -25px;
+        }
+
+        .b3:hover .b3img {height: 594px;}
+        .b6:hover .b6img {height: 292px;}
+
+        .b1:hover .tint,
+        .b2:hover .tint,
+        .b3:hover .tint,
+        .b4:hover .tint,
+        .b5:hover .tint,
+        .b6:hover .tint {
+            z-index: 1;
+        }
+
+        .b1:hover .imgtext,
+        .b2:hover .imgtext,
+        .b3:hover .imgtext,
+        .b4:hover .imgtext,
+        .b5:hover .imgtext,
+        .b6:hover .imgtext {
+            z-index: 2;
         }
     </style>
 </head>
@@ -243,11 +367,102 @@
         </div>
 
 
+        <div class="text">Popular Collections</div>
 
         <div class="body">
             <div class="main">
-                <div class="text">Popular Collections</div>
+
+                <!-- 
                 
+                Lifestyle: Children
+                Banking & Finance
+                Shopping & Retail
+                Lifestyle: Teenagers
+                
+                
+                Without People
+                Wedding
+                Healthcare & Medical
+                Indian Culture
+                Fashion
+                Beauty
+                Fitness
+                Lifestyle: Adults
+                Festivals & Occasions
+                Education & Learning
+                Food & Drink
+                
+                Friends
+                Rural India
+                Nature
+                Lifestyle: Couples  -->
+
+                <div class="line1">
+                    <div class="b1">
+
+                        <div class="conceptsideas b1img"></div>
+                        <div class="imgtext">Concepts & Ideas</div>
+                        <div class="tint"></div>
+                    </div>
+                    <div class="b2">
+                        <div class="lifestyleseniors b2img"></div>
+                        <div class="imgtext">Lifestyle: Seniors</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b3 b3height">
+                        <div class="beauty b3img"></div>
+                        <div class="imgtext">Beauty</div>
+                        <div class="tint"></div>
+                    </div>
+
+                    <div class="b4">
+                        <div class="businesscorporate b4img"></div>
+                        <div class="imgtext">Business & Corporate</div>
+                        <div class="tint"></div>
+
+                    </div>
+                </div>
+
+                <div class="line2">
+                    <div class="b5">
+                        <div class="lifestylefamilies b5img"></div>
+                        <div class="imgtext">Lifestyle: Families</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b6 b6height">
+                        <div class="vacationsholidays b6img"></div>
+                        <div class="imgtext">Vacations & Holidays</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    
+                </div>
+
+
+                <div class="fitness"></div>
+                <div class="friends"></div>
+                <div class="lifestylechildren"></div>
+                <div class="withoutpeople"></div>
+                <div class="lifestyleadults"></div>
+                <div class="ruralindia"></div>
+                <div class="bankingfinance"></div>
+                <div class="wedding"></div>
+                <div class="festivalsoccasions"></div>
+                <div class="nature"></div>
+                <div class="shoppingretail"></div>
+                <div class="healthcaremedical"></div>
+                <div class="educationlearning"></div>
+                <div class="lifestylecouples"></div>
+                <div class="lifestyleteenagers"></div>
+                <div class="indianculture"></div>
+                <div class="fashion"></div>
+                <div class="fooddrink"></div>
+
+
+
+
             </div>
 
         </div>
