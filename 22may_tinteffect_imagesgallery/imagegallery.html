@@ -5,14 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1e4ee72def.js" crossorigin="anonymous"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-
         .container {
             width: 100%;
             font-family: sans-serif;
@@ -76,8 +71,8 @@
             border: 3px solid black;
             height: 3px;
             width: 6px;
-            margin-left: -12.78%;
-            margin-top: -1.9%;
+            margin-left: -13.1%;
+            margin-top: -1.7%;
             rotate: 40deg;
             background-color: white;
             cursor: pointer;
@@ -204,17 +199,27 @@
         .body {
             width: 100%;
         }
-        
+
         .main {
             width: 100%;
             padding: 22px;
             display: inline-block;
         }
 
-        .line1,.line2 {
+        .line1,
+        .line2,
+        .line3,
+        .line4,
+        .line5,
+        .line6 {
             display: flex;
             height: 370px;
             width: 100%;
+        }
+
+        .line6 {
+            margin-top: 60px;
+            height: 384px;
         }
 
         .imgtext {
@@ -230,7 +235,7 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         .tint {
             position: absolute;
             background-color: rgba(0, 0, 0, 0.378);
@@ -240,33 +245,102 @@
             transition: 0.5s all;
         }
 
-        
         .b1,
         .b2,
         .b3,
-        .b4,
-        .b5,
-        .b6
-         {
+        .b4 {
             height: 362px;
-            width: 362px;
-            overflow: hidden;
+            width: 361px;
             position: relative;
             margin: 4px;
             display: inline-block;
+            overflow: hidden;
+        }
+
+        .line1 .b3 {
+            height: 544px;
+        }
+
+        .line2 .b2 {
+            height: 242px;
+        }
+
+        .line2 .b3 {
+            height: 180px;
+            top: 180px;
+        }
+
+        .line3 .b2 {
+
+            height: 180px;
+            top: -120px;
+        }
+
+        .line3 .b4 {
+            height: 544px;
+        }
+
+        .line4 .b2 {
+            height: 544px;
+            top: -305px;
 
         }
 
-        .b3height {height: 544px;}
-        .b6height {height: 242px;}
+        .line4 .b1 {
+            height: 242px;
+        }
 
-        .conceptsideas,
-        .lifestyleseniors,
-        .beauty,
-        .businesscorporate,
-        .lifestylefamilies,
-        .vacationsholidays
-         {
+        .line4 .b4 {
+            height: 544px;
+            top: 180px;
+        }
+
+        .line5 .b1 {
+            height: 544px;
+            top: -120px;
+
+        }
+
+        .line5 .b2 {
+            height: 242px;
+            top: -125px;
+        }
+
+        .line5 .b3 {
+            height: 544px;
+
+        }
+
+        .line5 .b4 {
+            top: 360px;
+            height: 444px;
+        }
+
+        .line6 .b1 {
+            height: 374px;
+        }
+
+        .line6 .b2 {
+            height: 242px;
+            top: -305px;
+        }
+
+        .line6 .b3 {
+            height: 432px;
+            left: -370px;
+            top: -57px;
+        }
+
+        .line6 .b4 {
+            height: 254px;
+            left: -370px;
+            top: 120px;
+        }
+
+
+
+
+        .b {
             height: 100%;
             width: 100%;
             background-position: center;
@@ -278,52 +352,126 @@
             transition: .5s all;
         }
 
-        .b1img {background-image: url(images/bodyimg/Concept-and-Ideas/Concept-and-Ideas.jpg);}
-
-        .b2img {background-image: url(images/bodyimg/Lifestyle-Seniors/Lifestyle-Seniors.jpg);}
-
-        .b3img {background-image: url(images/bodyimg/Beauty/Beauty.jpg);}
-
-        .b4img {background-image: url(images/bodyimg/Business-and-Corporate/Business-and-Corporate.jpg);}
-
-        .b5img {background-image: url(images/bodyimg/Lifestyle-Families/Lifestyle-Families.jpg);}
-
-        .b6img {background-image: url(images/bodyimg/Vacation-and-Holidays/Vacation-and-Holidays.jpg);}
-
-
-
-
-        .b1:hover .b1img,
-        .b2:hover .b2img,
-        .b3:hover .b3img,
-        .b4:hover .b4img,
-        .b5:hover .b5img,
-        .b6:hover .b6img
-         {
-            height: 412px;
-            width: 412px;
-            top: -25px;
-            left: -25px;
+        .img1 {
+            background-image: url(images/bodyimg/Concept-and-Ideas/Concept-and-Ideas.jpg);
         }
 
-        .b3:hover .b3img {height: 594px;}
-        .b6:hover .b6img {height: 292px;}
+        .img2 {
+            background-image: url(images/bodyimg/Lifestyle-Seniors/Lifestyle-Seniors.jpg);
+        }
+
+        .img3 {
+            background-image: url(images/bodyimg/Beauty/Beauty.jpg);
+        }
+
+        .img4 {
+            background-image: url(images/bodyimg/Business-and-Corporate/Business-and-Corporate.jpg);
+        }
+
+        .img5 {
+            background-image: url(images/bodyimg/Lifestyle-Families/Lifestyle-Families.jpg);
+        }
+
+        .img6 {
+            background-image: url(images/bodyimg/Vacation-and-Holidays/Vacation-and-Holidays.jpg);
+        }
+
+        .img7 {
+            background-image: url(images/bodyimg/Fitness/Fitness.jpg);
+        }
+
+        .img8 {
+            background-image: url(images/bodyimg/Friends/Friends.jpg);
+        }
+
+        .img9 {
+            background-image: url(images/bodyimg/Lifestyle-Children/Lifestyle-Children.jpg);
+        }
+
+        .img10 {
+            background-image: url(images/bodyimg/Without-People/Without-People.jpg);
+        }
+
+        .img11 {
+            background-image: url(images/bodyimg/Lifestyle-Adult/Lifestyle-Adult.jpg);
+
+        }
+
+        .img12 {
+            background-image: url(images/bodyimg/Rural-India/Rural-India.jpg);
+        }
+
+        .img13 {
+            background-image: url(images/bodyimg/Banking-and-Finance/Banking-and-Finance.jpg);
+        }
+
+        .img14 {
+            background-image: url(images/bodyimg/Wedding/Wedding.jpg);
+        }
+
+        .img15 {
+            background-image: url(images/bodyimg/Festivals-and-Occasions/Festivals-and-Occasions.jpg);
+        }
+
+        .img16 {
+            background-image: url(images/bodyimg/Nature/Nature.jpg);
+        }
+
+        .img17 {
+            background-image: url(images/bodyimg/Shopping-and-Retail/Shopping-and-Retail.jpg);
+        }
+
+        .img18 {
+            background-image: url(images/bodyimg/Healthcare-and-Medical/Healthcare-and-Medical.jpg);
+        }
+
+        .img19 {
+            background-image: url(images/bodyimg/Education-and-Learning/Education-and-Learning.jpg);
+        }
+
+        .img20 {
+            background-image: url(images/bodyimg/Lifestyle-Couple1/Lifestyle-Couple1.jpg);
+        }
+
+        .img21 {
+            background-image: url(images/bodyimg/Lifestyle-Teenagers/Lifestyle-Teenagers.jpg);
+        }
+
+        .img22 {
+            background-image: url(images/bodyimg/Indian-Culture/Indian-Culture.jpg);
+        }
+
+        .img23 {
+            background-image: url(images/bodyimg/Fashion71/Fashion71.jpg);
+        }
+
+        .img24 {
+            background-image: url(images/bodyimg/Food-and-Drink1/Food-and-Drink1.jpg);
+        }
+
+
+
+        .b1:hover .b,
+        .b2:hover .b,
+        .b3:hover .b,
+        .b4:hover .b {
+            height: 113%;
+            width: 110%;
+            top: -15px;
+            left: -15px;
+        }
 
         .b1:hover .tint,
         .b2:hover .tint,
         .b3:hover .tint,
-        .b4:hover .tint,
-        .b5:hover .tint,
-        .b6:hover .tint {
+        .b4:hover .tint {
             z-index: 1;
         }
 
         .b1:hover .imgtext,
         .b2:hover .imgtext,
         .b3:hover .imgtext,
-        .b4:hover .imgtext,
-        .b5:hover .imgtext,
-        .b6:hover .imgtext {
+        .b4:hover .imgtext {
             z-index: 2;
         }
     </style>
@@ -370,54 +518,30 @@
         <div class="text">Popular Collections</div>
 
         <div class="body">
+
+
             <div class="main">
-
-                <!-- 
-                
-                Lifestyle: Children
-                Banking & Finance
-                Shopping & Retail
-                Lifestyle: Teenagers
-                
-                
-                Without People
-                Wedding
-                Healthcare & Medical
-                Indian Culture
-                Fashion
-                Beauty
-                Fitness
-                Lifestyle: Adults
-                Festivals & Occasions
-                Education & Learning
-                Food & Drink
-                
-                Friends
-                Rural India
-                Nature
-                Lifestyle: Couples  -->
-
                 <div class="line1">
                     <div class="b1">
 
-                        <div class="conceptsideas b1img"></div>
+                        <div class="b img1"></div>
                         <div class="imgtext">Concepts & Ideas</div>
                         <div class="tint"></div>
                     </div>
                     <div class="b2">
-                        <div class="lifestyleseniors b2img"></div>
+                        <div class="b img2"></div>
                         <div class="imgtext">Lifestyle: Seniors</div>
                         <div class="tint"></div>
 
                     </div>
-                    <div class="b3 b3height">
-                        <div class="beauty b3img"></div>
+                    <div class="b3">
+                        <div class="b img3"></div>
                         <div class="imgtext">Beauty</div>
                         <div class="tint"></div>
                     </div>
 
                     <div class="b4">
-                        <div class="businesscorporate b4img"></div>
+                        <div class="b img4"></div>
                         <div class="imgtext">Business & Corporate</div>
                         <div class="tint"></div>
 
@@ -425,44 +549,249 @@
                 </div>
 
                 <div class="line2">
-                    <div class="b5">
-                        <div class="lifestylefamilies b5img"></div>
+                    <div class="b1">
+                        <div class="b img5"></div>
                         <div class="imgtext">Lifestyle: Families</div>
                         <div class="tint"></div>
 
                     </div>
-                    <div class="b6 b6height">
-                        <div class="vacationsholidays b6img"></div>
+                    <div class="b2">
+                        <div class="b img6"></div>
                         <div class="imgtext">Vacations & Holidays</div>
                         <div class="tint"></div>
 
                     </div>
-                    
+                    <div class="b3">
+                        <div class="b img7"></div>
+                        <div class="imgtext">Fitness</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b4">
+                        <div class="b img8"></div>
+                        <div class="imgtext">Friends</div>
+                        <div class="tint"></div>
+
+                    </div>
+                </div>
+                <div class="line3">
+                    <div class="b1">
+                        <div class="b img9"></div>
+                        <div class="imgtext">Lifestyle: Children</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b2">
+                        <div class="b img10"></div>
+                        <div class="imgtext">Without People</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b3">
+                        <div class="b img11"></div>
+                        <div class="imgtext">Lifestyle: Adults</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b4">
+                        <div class="b img12"></div>
+                        <div class="imgtext">Rural India</div>
+                        <div class="tint"></div>
+
+                    </div>
                 </div>
 
+                <div class="line4">
+                    <div class="b1">
+                        <div class="b img13"></div>
+                        <div class="imgtext">Banking & Finance</div>
+                        <div class="tint"></div>
 
-                <div class="fitness"></div>
-                <div class="friends"></div>
-                <div class="lifestylechildren"></div>
-                <div class="withoutpeople"></div>
-                <div class="lifestyleadults"></div>
-                <div class="ruralindia"></div>
-                <div class="bankingfinance"></div>
-                <div class="wedding"></div>
-                <div class="festivalsoccasions"></div>
-                <div class="nature"></div>
-                <div class="shoppingretail"></div>
-                <div class="healthcaremedical"></div>
-                <div class="educationlearning"></div>
-                <div class="lifestylecouples"></div>
-                <div class="lifestyleteenagers"></div>
-                <div class="indianculture"></div>
-                <div class="fashion"></div>
-                <div class="fooddrink"></div>
+                    </div>
+                    <div class="b2">
+                        <div class="b img14"></div>
+                        <div class="imgtext">Wedding</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b3">
+                        <div class="b img15"></div>
+                        <div class="imgtext">Festivals & Occasions</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b4">
+                        <div class="b img16"></div>
+                        <div class="imgtext">Nature</div>
+                        <div class="tint"></div>
+
+                    </div>
+                </div>
+                <div class="line5">
+                    <div class="b1">
+                        <div class="b img17"></div>
+                        <div class="imgtext">Shopping & Retail</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b2">
+                        <div class="b img18"></div>
+                        <div class="imgtext">Healthcare & Medical</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b3">
+                        <div class="b img19"></div>
+                        <div class="imgtext">Education & Learning</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b4">
+                        <div class="b img20"></div>
+                        <div class="imgtext">Lifestyle: Couples</div>
+                        <div class="tint"></div>
+
+                    </div>
+                </div>
+                <div class="line6">
+                    <div class="b1">
+                        <div class="b img21"></div>
+                        <div class="imgtext">Lifestyle: Teenagers</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b2">
+                        <div class="b img22"></div>
+                        <div class="imgtext">Indian Culture</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b3">
+                        <div class="b img23"></div>
+                        <div class="imgtext">Fashion</div>
+                        <div class="tint"></div>
+
+                    </div>
+                    <div class="b4">
+                        <div class="b img24"></div>
+                        <div class="imgtext">Food & Drink</div>
+                        <div class="tint"></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="whysection">
+                <div class="mainwhysection">
+                    WHY IMAGESGALLERY? <br>
+                    India's diversity and complexity can be witnessed through its people, traditions and values
+                    associated with distinctive regional customs, habits, lifestyle and festivals. That's why our
+                    content reflects the innate expressions of deep-rooted feelings of individuals through which spring
+                    their day-to-day actions. From contemporary concepts and ideas to the broadest range of categories
+                    depicting Indians in virtually all walks of life, age groups and expressions - you will find it all
+                    here!
+                    <a href="#">Know More</a>
+                </div>
+            </div>
+            <div class="popularsearch">
+                <div class="text" ;>Popular Searches</div>
+                <div class="buttongroup">
+                    <button>Family</button>
+                    <button>Business</button>
+                    <button>Jewellery</button>
+                    <button>Couples</button>
+                    <button>Wedding</button>
+                    <button>Farmer</button>
+                    <button>Kitchen</button>
+                    <button>Doctor</button>
+                    <button>Celebration</button>
+                    <button>Office</button>
+                    <button>Travel</button>
+                    <button>Shopping</button>
+                    <button>Education</button>
+                    <button>Students</button>
+                    <button>Insurance</button>
+                    <button>Mobile</button>
+                    <button>Computer</button>
+                    <button>Food</button>
+                    <button>Festivals</button>
+                </div>
+            </div>
+            <div class="mainfooter">
+                <div class="footersection">
+
+                    <div class="footercategories">
+                        <div class="infosection">
+                            <div class="social">
+                                <div class="email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    info@imagesgallery.com
+                                </div>
+                                <div class="tollfree">
+                                    <i class="fa-solid fa-phone"></i>
+                                    All India Toll Free: 1800-11-0000
+                                </div>
+                                <div class="whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    Whatsapp Us: +919911360000
+                                </div>
+                            </div>
+                            <div class="sociallinks">Follow Us
+                                <br>
+                                <i class="fa-brands fa-square-facebook"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <i class="fa-brands fa-square-twitter"></i>
+
+                            </div>
+                        </div>
+
+                        <div class="other">
+                            <div class="companyinfo">Company Info
+                                <ul>
+                                    <li>Home</li>
+                                    <li>About Us</li>
+                                    <li>Testimonials</li>
+                                    <li>Image Research</li>
+                                </ul>
+                            </div>
+
+                            <div class="learnmore">Learn More
+                                <ul>
+                                    <li>Pricing</li>
+                                    <li>Licensing</li>
+                                    <li>Terms of Use</li>
+                                    <li>Privacy Policy</li>
+                                </ul>
+
+                            </div>
+                            <div class="needhelp">Need Help?
+                                <ul>
+                                    <li>Contact Us</li>
+                                    <li>Search Tips</li>
+                                    <li>FAQ</li>
+                                    <li>Technical</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="footerrights">
+                        <div class="copyright">
+                            ©
+                            https://www.imagesgallery.com
+                            . A division of Mash Audio Visuals Pvt. Ltd. All rights reserved.
+                        </div>
+                        <div class="termsection">
+                            <div class="term">Terms of Use |
+                                Privacy Policy |
+                                FAQs
+                            </div>
+                            <div class="cards"></div>
+                            <div class="contactus"></div>
+                        </div>
+                    </div>
 
-
+                </div>
             </div>
 
         </div>

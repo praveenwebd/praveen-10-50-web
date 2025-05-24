@@ -1,0 +1,160 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+.whysection{
+    width: 100%;
+}
+.mainwhysection{
+    margin: 20px;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    height: 190px;
+    text-align: justify;
+    padding: 35px;
+    font-weight: bold;
+    line-height: 30px;
+    box-shadow: 0px 0px 10px 2px red;
+}
+.mainwhysection a{
+    color: white;    
+}
+.mainwhysection a:hover{
+    color: blue;
+}
+.popularsearch{}
+.buttongroup{
+    padding: 10px;
+    background-image: url(images/buttonbackground/popular-search.d4dd1f4b9abcce09415b.png);
+    background-repeat: no-repeat;
+    background-size: 170px;
+    background-position-x: -35px;
+}
+.buttongroup button{
+    width: 190px;
+    height: 45px;
+    margin: 15px 10px 15px 10px;
+    border-radius: 50px;
+    border: 3px solid grey;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    display: inline-block;
+    background-color: silver;
+}
+.buttongroup button:hover{
+    box-shadow: 0px 0px 10px 5px red;
+    background-color: white;
+    cursor: pointer;
+}
+.mainfooter{
+    height: 420px;
+    width: 100%;
+}
+.footersection{
+    background-color: black;
+    height: 100%;
+    margin-top: 30px;
+    
+}
+.footercategories{
+    width: 100%;
+    height: 65%;
+    display: flex;
+}
+.infosection{
+    width: 50%;
+    color: white;
+    font-weight: bold;
+    
+}
+.social, .sociallinks{
+    padding: 10px;
+    
+}
+.social div{
+    margin: 25px 25px 0px 15px;
+}
+.social i{
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.sociallinks{
+    padding-left: 30px;
+}
+.sociallinks i{
+    margin: 10px 10px 0px 0px;
+    font-size: 40px;
+}
+.other{
+    width: 50%;
+    padding-top: 20px;
+    color: white;
+    display: flex;  
+    font-weight: bold;
+}
+.companyinfo,.learnmore,.needhelp{
+    padding-top: 35px;
+}
+
+.other .companyinfo,.learnmore,.needhelp{
+width: 33%;
+}
+.other ul{
+    list-style: none;
+    margin: 22px 10px 10px 0px;
+}
+.other li{
+    margin: 5px 0px 5px 0px;
+}
+
+
+
+.footerrights{
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.copyright{
+    width: 48%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+
+.termsection{
+    width: 50%;
+    height: 30px;
+    color: white;
+    
+}
+.term{
+float: left;    
+}
+
+
+
+
+.cards{
+    
+    height: 40px;
+    width: 40%;
+    float: right;
+    background-image: url(images/footerimg/payment-footer.85a7387e6bacddac2209.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    position: relative;
+    top: -10px;
+    
+}
+
