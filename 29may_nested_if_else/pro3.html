@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let t1 = parseInt(prompt("Enter 1 team score : "));
+        let t2 = parseInt(prompt("Enter 2 team score : "));
+        let t3 = parseInt(prompt("Enter 3 team score : "));
+        let t4 = parseInt(prompt("Enter 4 team score : "));
+        let t5 = parseInt(prompt("Enter 5 team score : "));
+
+        if (t1 > t2) {
+            if (t1 > t3) {
+                if (t1 > t4) {
+                    if (t1 > t5) {
+
+                        document.writeln("Team 1 is winner : " + t1);
+                    }
+                    else {
+                        document.writeln("Team 5 is winner : " + t5);
+
+                    }
+                } else {
+                    if (t4 > t5) {
+
+                        document.writeln("Team 4 is winner : " + t4);
+                    }
+                    else {
+                        document.writeln("Team 5 is winner : " + t5);
+
+                    }
+
+                }
+            } else {
+                if (t3 > t4) {
+                    if (t3 > t5) {
+
+                        document.writeln("Team 3 is winner : " + t3);
+                    }
+                    else {
+                        document.writeln("Team 5 is winner : " + t5);
+
+                    }
+                } else {
+                    if (t4 > t5) {
+
+                        document.writeln("Team 4 is winner : " + t4);
+                    }
+                    else {
+                        document.writeln("Team 5 is winner : " + t5);
+                    }
+                }
+            }
+
+        } else {
+            if (t2 > t3) {
+                if (t2 > t4) {
+                    if (t2 > t5) {
+                        document.writeln("Team 2 is winner : " + t2);
+
+                    }
+                    else {
+
+                        document.writeln("Team 5 is winner : " + t5);
+                    }
+                } else {
+                    if (t4 > t5) {
+
+                        document.writeln("Team 4 is winner : " + t4);
+
+                    }
+                    else {
+
+                        document.writeln("Team 5 is winner : " + t5);
+                    }
+
+                }
+            } else {
+                if (t3 > t4) {
+                    if (t3 > t5) {
+
+                        document.writeln("Team 3 is winner : " + t3);
+
+                    }
+                    else {
+
+                        document.writeln("Team 5 is winner : " + t5);
+                    }
+                } else {
+                    if (t4 > t5) {
+
+                        document.writeln("Team 4 is winner : " + t4);
+
+                    }
+                    else {
+
+                        document.writeln("Team 5 is winner : " + t5);
+                    }
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
