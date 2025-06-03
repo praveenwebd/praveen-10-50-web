@@ -299,8 +299,9 @@
 }
 
 .dpcontainer{
-    border: 2px solid red;
+    border: 1px solid red;
     height: 1000px;
+    margin-top:50px;
 }
 .dpcontainer .left{
     float: left;
@@ -367,7 +368,62 @@ font-size: 18px;
 }
 .right .productdetails{
     width: 70%;
+    margin: 0px 15px 0px 5px;
+    padding: 0px 10px 0px 10px;
+    border: 2px solid red;
 }
+.aboutproduct .name{
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+}
+.storevisit a{
+    color: #2162a1;
+    text-decoration: none;
+}
+.aboutproduct .rating{
+    display: flex;
+}
+.rating .starsection{
+    display: flex;
+    padding: 5px;
+}
+.starsection i{
+    margin-left: 2px;
+    color: orange;
+}
+.rating .totalrating{
+    color: #2162a1;
+    padding: 5px;
+    
+}
+.warrantyrow ul{
+    display: flex;
+    
+}
+.warrantyrow li{
+    list-style: none;
+    cursor: pointer;
+}
+.warrantyrow .box{
+    height: 110px;
+    width: 100px;
+    text-align: center;
+    color: #2162a1;
+}
+.warrantyrow .img{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.warrantyrow img{
+    height: 70%;
+    width: 40%;
+}
+
+
+
 .right .stockdetails{
     width: 30%;
     
