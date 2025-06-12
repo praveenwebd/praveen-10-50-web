@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let num = parseInt(prompt("How Many Prime Number Print : "));
+
+        for (i = 2; i < num; i++) {
+            if (num % 2 == 0) {
+                document.writeln("Not " + num);
+                document.writeln("<br>");
+                break;
+            }
+            else {
+                document.writeln("Prime NO. " + num);
+                break;
+            }
+        }
+
+        document.writeln("<br>");
+        document.writeln("Number of times loop executed : " + count);
+
+
+
+    </script>
+</body>
+
+</html>
