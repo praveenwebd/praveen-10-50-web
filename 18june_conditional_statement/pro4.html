@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // switch
+        let num1 = parseInt(prompt("Enter a first Number : "));
+        let num2 = parseInt(prompt("Enter a Second Number : "));
+        let symbol =prompt("Enter symbol to perfom a operation : ");
+        
+        switch (symbol) {
+            case "+":
+                document.writeln(num1+num2);
+                break;
+
+            case "-":
+                document.writeln(num1-num2);
+                break;
+
+            case "/":
+                document.writeln(num1/num2);
+                break;
+
+            case "*":
+                document.writeln(num1*num2);
+                break;
+
+            default:
+                document.writeln("Wrong Input");
+                break;
+        }
+    </script>
+</body>
+
+</html>

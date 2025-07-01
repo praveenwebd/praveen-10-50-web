@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: skyblue;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calculator {
+            border: 2px solid red;
+            width: 30vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .firstno,
+        .secondno,
+        .operation,
+        .resultsection {
+            width: 100%;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        input {
+            width: 100%;
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px 0px 10px 0px;
+        }
+
+        button {
+            width: 40px;
+            font-size: 20px;
+            padding: 10px;
+            cursor: pointer;
+
+        }
+
+        .resultsection {}
+
+        .resultsection>button {
+            width: 49%;
+            background-color: green;
+            color: white;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="firstno">
+                <input type="text" name="" id="fnumber" placeholder="Enter first Number : "> <br>
+                <button onclick="setone()" id="one">1</button>
+                <button onclick="settwo()" id="two">2</button>
+                <button onclick="setthree()" id="three">3</button>
+                <button onclick="setfour()" id="four">4</button>
+                <button onclick="setfive()" id="five">5</button>
+                <button onclick="setsix()" id="six">6</button>
+                <button onclick="setseven()" id="seven">7</button>
+                <button onclick="seteight()" id="eight">8</button>
+                <button onclick="setnine()" id="nine">9</button>
+                <button onclick="setzero()" id="zero">0</button>
+                <br>
+            </div>
+            <div class="secondno">
+                <input type="text" name="" id="snumber" placeholder="Enter Second Number : "><br>
+                <button onclick="setone1()" id="one1">1</button>
+                <button onclick="settwo2()" id="two2">2</button>
+                <button onclick="setthree2()" id="three2">3</button>
+                <button onclick="setfour2()" id="four2">4</button>
+                <button onclick="setfive2()" id="five2">5</button>
+                <button onclick="setsix2()" id="six2">6</button>
+                <button onclick="setseven2()" id="seven2">7</button>
+                <button onclick="seteight2()" id="eight2">8</button>
+                <button onclick="setnine2()" id="nine2">9</button>
+                <button onclick="setzero2()" id="zero2">0</button>
+                <br>
+
+            </div>
+            <div class="operation">
+                <input type="text" name="" id="operation" placeholder="Enter Operation : "><br>
+                <button onclick="setadd()" id="add">+</button>
+                <button onclick="setminus()" id="sub">-</button>
+                <button onclick="setmultiply()" id="multiply">*</button>
+                <button onclick="setdivide()" id="divide">/</button>
+                <br>
+            </div>
+            <div class="resultsection">
+
+                <button type="submit" value="Submit" id="result" onclick="result()">Submit</button>
+                <button type="Clear" value="Clear" id="Clear" onclick="screenclear()">Clear</button>
+                <input type="text" name="" id="resultbox" placeholder="Result : "><br>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        function setone() {
+            let num = document.getElementById('one').textContent;
+            let old = document.getElementById('fnumber').value;
+            newnum = old + "" + num;
+            document.getElementById('fnumber').value = newnum;
+        }
+        function settwo() {
+            let num = document.getElementById('two').innerHTML;
+            let old = document.getElementById('fnumber').value;
+            newnum = old + "" + num;
+            document.getElementById('fnumber').value = newnum;
+        }
+        function setthree() {
+            let num = document.getElementById('three').innerHTML;
+            let old = document.getElementById('fnumber').value;
+            newnum = old + "" + num;
+            document.getElementById('fnumber').value = newnum;
+        }
+
+        function setfour() {
+            let num = document.getElementById('four').innerHTML;
+            let old = document.getElementById('fnumber').value;
+            newnum = old + "" + num;
+            document.getElementById('fnumber').value = newnum;
+        }
+
+        function setfive() {
+            let num = document.getElementById('five').innerHTML;
+            let old = document.getElementById('fnumber').value;
+            newnum = old + "" + num;
+            document.getElementById('fnumber').value = newnum;
+        }
+
+        function setsix() {
+            let num = document.getElementById('six').innerHTML;
+            let old = document.getElementById('fnumber').value;
+            newnum = old + "" + num;
+            document.getElementById('fnumber').value = newnum;
+        }
+
+        function setseven() {
+            let num = document.getElementById('seven').innerHTML;
+            let old = document.getElementById('fnumber').value;
+            newnum = old + "" + num;
+            document.getElementById('fnumber').value = newnum;
+        }
+        function seteight() {
+            let num = document.getElementById('eight').innerHTML;
+            let old = document.getElementById('fnumber').value;
+            newnum = old + "" + num;
+            document.getElementById('fnumber').value = newnum;
+        }
+        function setnine() {
+            let num = document.getElementById('nine').innerHTML;
+            let old = document.getElementById('fnumber').value;
+            newnum = old + "" + num;
+            document.getElementById('fnumber').value = newnum;
+        }
+        function setzero() {
+            let num = document.getElementById('zero').innerHTML;
+            let old = document.getElementById('fnumber').value;
+            newnum = old + "" + num;
+            document.getElementById('fnumber').value = newnum;
+        }
+
+
+
+        function setone1() {
+            let num = document.getElementById('one1').innerHTML;
+            let old = document.getElementById('snumber').value;
+            newnum = old + "" + num;
+            document.getElementById('snumber').value = newnum;
+        }
+        function settwo2() {
+            let num = document.getElementById('two2').innerHTML;
+            let old = document.getElementById('snumber').value;
+            newnum = old + "" + num;
+            document.getElementById('snumber').value = newnum;
+        }
+        function setthree2() {
+            let num = document.getElementById('three2').innerHTML;
+            let old = document.getElementById('snumber').value;
+            newnum = old + "" + num;
+            document.getElementById('snumber').value = newnum;
+        }
+
+        function setfour2() {
+            let num = document.getElementById('four2').innerHTML;
+            let old = document.getElementById('snumber').value;
+            newnum = old + "" + num;
+            document.getElementById('snumber').value = newnum;
+        }
+
+        function setfive2() {
+            let num = document.getElementById('five2').innerHTML;
+            let old = document.getElementById('snumber').value;
+            newnum = old + "" + num;
+            document.getElementById('snumber').value = newnum;
+        }
+
+        function setsix2() {
+            let num = document.getElementById('six2').innerHTML;
+            let old = document.getElementById('snumber').value;
+            newnum = old + "" + num;
+            document.getElementById('snumber').value = newnum;
+        }
+
+        function setseven2() {
+            let num = document.getElementById('seven2').innerHTML;
+            let old = document.getElementById('snumber').value;
+            newnum = old + "" + num;
+            document.getElementById('snumber').value = newnum;
+        }
+        function seteight2() {
+            let num = document.getElementById('eight2').innerHTML;
+            let old = document.getElementById('snumber').value;
+            newnum = old + "" + num;
+            document.getElementById('snumber').value = newnum;
+        }
+        function setnine2() {
+            let num = document.getElementById('nine2').innerHTML;
+            let old = document.getElementById('snumber').value;
+            newnum = old + "" + num;
+            document.getElementById('snumber').value = newnum;
+        }
+        function setzero2() {
+            let num = document.getElementById('zero2').innerHTML;
+            let old = document.getElementById('snumber').value;
+            newnum = old + "" + num;
+            document.getElementById('snumber').value = newnum;
+        }
+
+
+
+        function setadd() {
+            let num = document.getElementById('add').innerHTML;
+            document.getElementById('operation').value = num;
+
+        }
+        function setminus() {
+            let num = document.getElementById('sub').innerHTML;
+            document.getElementById('operation').value = num;
+
+        }
+        function setmultiply() {
+            let num = document.getElementById('multiply').innerHTML;
+            document.getElementById('operation').value = num;
+        }
+        function setdivide() {
+            let num = document.getElementById('divide').innerHTML;
+            document.getElementById('operation').value = num;
+        }
+
+        function result() {
+            let firstno = document.getElementById('fnumber').value;
+            let operation = document.getElementById('operation').value;
+            let secondno = document.getElementById('snumber').value;
+            let expresion = firstno + operation + secondno;
+
+            let result = eval(expresion);
+            document.getElementById('resultbox').value = result;
+        }
+        function screenclear() {
+            document.getElementById('fnumber').value = "";
+            document.getElementById('operation').value = "";
+            document.getElementById('snumber').value = "";
+            document.getElementById('resultbox').value = "";
+
+
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

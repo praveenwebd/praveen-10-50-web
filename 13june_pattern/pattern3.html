@@ -8,35 +8,16 @@
 </head>
 
 <body>
-
     <script>
-
-
-        for (i = 0; i <= 4; i++) {
-
-            for (k = 4; k >= i; k--) {
+        for (i = 1; i <= 5; i++) {
+            for(k=5;k>i;k--){
                 document.writeln("&nbsp;&nbsp;");
             }
-
-            num = Math.pow(11, i);
-
-            for (j = 1; j = num; j++) {
-
-                rem = num % 10;
-                document.writeln(rem);
-                num = parseInt(num / 10);
-                document.writeln("&nbsp;&nbsp;");
-
+            for (j = 1; j <= i; j++) {
+                document.writeln("*");
             }
-
-
             document.writeln("<br>");
-
-
         }
-
-
-
     </script>
 </body>
 

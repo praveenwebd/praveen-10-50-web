@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 728px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, skyblue, grey, skyblue);
+        }
+
+        .calculator {
+            width: 600px;
+            background-color: white;
+            overflow: hidden;
+            border-radius: 3px;
+        }
+
+        .screen input {
+            background-color: silver;
+            border: 2px solid black;
+            width: 100%;
+            height: 100px;
+            font-size: 70px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: right;
+            border-radius: 3px;
+            padding-right: 40px;
+        }
+
+        .keyboard {
+            background-color: yellowgreen;
+            padding-left: 30px;
+            padding-top: 5px;
+            height: 450px;
+        }
+
+        .keyboard button {
+            width: 20%;
+            height: 70px;
+            border-radius: 25%;
+            margin-top: 15px;
+            margin-right: 20px;
+            border: 0.7px dashed black;
+            background-color: darkgray;
+            font-size: 50px;
+
+        }
+
+        .keyboard button:hover {
+            cursor: pointer;
+            background-color: rgb(219, 213, 213);
+        }
+
+        .keyboard button:active {
+
+            border: 2px dashed black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <div class="screen">
+            <input type="text" name="" id="screen">
+        </div>
+
+        <div class="keyboard">
+
+            <button onclick="clrscreen()">C</button>
+            <button onclick="setnum(this)">DEL</button>
+            <button onclick="setoperation(this)">%</button>
+            <button onclick="setoperation(this)">/</button> <br>
+            <button onclick="setnum(this)">7</button>
+            <button onclick="setnum(this)">8</button>
+            <button onclick="setnum(this)">9</button>
+            <button onclick="setoperation(this)">*</button><br>
+            <button onclick="setnum(this)">4</button>
+            <button onclick="setnum(this)">5</button>
+            <button onclick="setnum(this)">6</button>
+            <button onclick="setoperation(this)">-</button><br>
+            <button onclick="setnum(this)">1</button>
+            <button onclick="setnum(this)">2</button>
+            <button onclick="setnum(this)">3</button>
+            <button onclick="setoperation(this)">+</button><br>
+            <button onclick="setnum(this)">00</button>
+            <button onclick="setnum(this)">0</button>
+            <button onclick="setdigit(this)">.</button>
+            <button onclick="calc()">=</button>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        function clrscreen() {
+            document.getElementById('screen').value = '';
+        }
+
+        function setnum(data) {
+
+            let currentdata = data.innerText;
+            let olddata = document.getElementById('screen').value;
+            let newdata = olddata + '' + currentdata;
+            document.getElementById('screen').value = newdata;
+
+        }
+
+
+
+        function setoperation(data) {
+
+            let num = document.getElementById('screen').value;
+            document.getElementById('screen').value = "";
+            let operation = data.innerText;
+            let newdata = num    + '' + operation;
+            document.getElementById('screen').value = newdata;
+        }
+        function calc() {
+
+            let expression = document.getElementById('screen').value;
+            let result = eval(expression);
+            document.getElementById('screen').value = result;
+
+        }
+    </script>
+
+</body>
+
+</html>

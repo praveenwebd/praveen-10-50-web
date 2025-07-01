@@ -14,28 +14,22 @@
 
         for (i = 0; i <= 4; i++) {
 
-            for (k = 4; k >= i; k--) {
+            num = (Math.pow(11, i));
+            for(k=i;k<4;k++){
                 document.writeln("&nbsp;&nbsp;");
             }
 
-            num = Math.pow(11, i);
-
-            for (j = 1; j = num; j++) {
-
+            
+            for (j = 0; j = num; j++) {
                 rem = num % 10;
-                document.writeln(rem);
-                num = parseInt(num / 10);
+                document.writeln(String.fromCharCode(rem+64));
+                num=parseInt(num/10);
                 document.writeln("&nbsp;&nbsp;");
-
+                
             }
-
 
             document.writeln("<br>");
-
-
         }
-
-
 
     </script>
 </body>

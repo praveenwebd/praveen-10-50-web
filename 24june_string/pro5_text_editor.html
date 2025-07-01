@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea {
+            width: 50vw;
+            height: 40vw;
+            border: 10px double black;
+            font-size: 30px;
+            padding: 15px;
+            background-color: lightblue;
+        }
+
+        button {
+            font-size: 30px;
+            font-weight: bold;
+            background-color: blue;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="text"></textarea>
+    <button onclick="dispalert()">Get Text</button>
+    <button onclick="dispbold()">Bold</button>
+    <button onclick="dispitalic()">Italic</button>
+    <script>
+
+        italic = true;
+        bold = true;
+
+        function dispalert() {
+            let data = document.getElementById('text').value;
+            alert(data);
+        }
+        function dispbold() {
+            if (bold == true) {
+                let data = document.getElementById('text');
+                data.style.fontWeight = "bolder";
+                bold = false;
+            }
+            else {
+                let data = document.getElementById('text');
+                data.style.fontWeight = "normal";
+                bold = true;
+            }
+
+        }
+        function dispitalic() {
+            if (italic == true) {
+                let data = document.getElementById('text');
+                data.style.fontStyle = "italic";
+                italic = false;
+            }
+            else {
+                let data = document.getElementById('text');
+                data.style.fontStyle = "normal";
+                italic = true;
+            }
+        }
+    </script>
+</body>
+
+</html>

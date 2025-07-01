@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let symbol=prompt("Enter any symbol : ");
+        switch(symbol){
+            case "+":
+            sub();
+            break;
+
+            case "-":
+            subtract();
+            break;
+
+            case "/":
+            divide();
+            break;
+
+            case "*":
+            multiply();
+            break;
+        }
+
+
+        function sub(){
+            let num1=parseInt(prompt("Enter a number : "));
+            let num2=parseInt(prompt("Enter second number : "));
+            let result=num1+num2;
+            document.writeln(result);
+        }
+
+        function subtract(){
+            let num1=parseInt(prompt("Enter a number : "));
+            let num2=parseInt(prompt("Enter second number : "));
+            let result=num1-num2;
+            document.writeln(result);
+        }
+
+        function divide(){
+            let num1=parseInt(prompt("Enter a number : "));
+            let num2=parseInt(prompt("Enter second number : "));
+            let result=num1/num2;
+            document.writeln(result);
+        }
+
+        function multiply(){
+            let num1=parseInt(prompt("Enter a number : "));
+            let num2=parseInt(prompt("Enter second number : "));
+            let result=num1*num2;
+            document.writeln(result);
+        }
+
+    </script>
+</body>
+</html>

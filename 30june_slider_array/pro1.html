@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #image {
+            width: 800px;
+            border-radius: 80px;
+            border: 10px double black;
+            margin: 10px;
+            padding: 10px;
+
+        }
+
+        #nxtbtn,
+        #backbtn {
+            font-size: 40px;
+            width: 300px;
+            border: 3px solid red;
+            padding: 10px;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rebeccapurple;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .button button:hover {
+            cursor: pointer;
+            background-color: goldenrod;
+        }
+
+        .button button:active {
+            background-color: black;
+            color: white;
+        }
+
+        .number button {
+            font-size: 20px;
+            width: 50px;
+            border: 3px solid black;
+            padding: 10px;
+            margin: 0px 10px 0px 10px;
+        }
+
+        .number button:hover {
+            cursor: pointer;
+        }
+
+        .number button:active {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            border: 3px solid white;
+        }
+
+        .curntimg {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="1.jpg" alt="" id="image">
+        <div class="number">
+            <button id="btn1" class="curntimg">1</button>
+            <button id="btn2">2</button>
+            <button id="btn3">3</button>
+            <button id="btn4">4</button>
+            <button id="btn5">5</button>
+            <button id="btn6">6</button>
+        </div>
+        <div class="button">
+            <button id="backbtn">Back</button>
+            <button id="nxtbtn">Next</button>
+        </div>
+        
+    </div>
+    
+    <script>
+        
+        const imagelist = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"];
+        
+        
+        document.getElementById('nxtbtn').addEventListener('click', () => {
+            
+            let currentimage = document.getElementById('image').getAttribute('src', '');
+            let currentindex = imagelist.indexOf(currentimage);
+
+            if (currentindex == imagelist.length - 1) {
+                newindex = 0;
+            }
+            else {
+                newindex = currentindex + 1;
+            }
+            let newimage = imagelist[newindex];
+            document.getElementById('image').setAttribute('src', newimage);
+
+            for(i=1;i<=6;i++){
+                document.getElementById('btn'+(i)).setAttribute('class','');
+                document.getElementById('btn'+(newindex+1)).setAttribute('class','curntimg');
+            }
+
+        });
+
+
+        document.getElementById('backbtn').addEventListener('click', () => {
+
+            let currentimage = document.getElementById('image').getAttribute('src', '');
+            let currentindex = imagelist.indexOf(currentimage);
+
+            if (currentindex == 0) {
+                newindex = 5;
+            }
+            else {
+                newindex = currentindex - 1;
+            }
+            let newimage = imagelist[newindex];
+            document.getElementById('image').setAttribute('src', newimage);
+
+            for(i=1;i<=6;i++){
+                document.getElementById('btn'+(i)).setAttribute('class','');
+                document.getElementById('btn'+(newindex+1)).setAttribute('class','curntimg');
+            }
+
+        });        
+    </script>
+
+</body>
+
+</html>
