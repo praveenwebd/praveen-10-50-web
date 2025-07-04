@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="contry">India,Brazil,Canada,Germany,Italy,Japan,Korea North,Maldives,Singapore,Switzerland</div>
+    <div id="countriesId"></div>
+    <div id="stateId"></div>
+
+    <script>
+
+        const countriesList = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua & Deps", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Rep", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Congo {Democratic Rep}", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland {Republic}", "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea North", "Korea South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar, {Burma}", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russian Federation", "Rwanda", "St Kitts & Nevis", "St Lucia", "Saint Vincent & the Grenadines", "Samoa", "San Marino", "Sao Tome & Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"];
+
+        const indiastateList = ["Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"];
+
+        const brazilstateList = ["Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"
+
+        ];
+        const canadastateList = ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", "Nova Scotia", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan", "Northwest Territories", "Nunavut", "Yukon"
+        ];
+        const germanystateList = ["Baden-Württemberg", "Bavaria", "Berlin", "Brandenburg", "Bremen", "Hamburg", "Hesse", "Lower Saxony", "Mecklenburg-Vorpommern", "North Rhine-Westphalia", "Rhineland-Palatinate", "Saarland", "Saxony", "Saxony-Anhalt", "Schleswig-Holstein", "Thuringia"
+        ];
+        const italystateList = ["Abruzzo", "Aosta Valley", "Apulia", "Basilicata", "Calabria", "Campania", "Emilia-Romagna", "Friuli Venezia Giulia", "Lazio", "Liguria", "Lombardy", "Marche", "Molise", "Piedmont", "Sardinia", "Sicily", "Trentino-South Tyrol", "Tuscany", "Umbria", "Veneto"
+        ];
+        const japanstateList = ["Hokkaido", "Aomori", "Iwate", "Miyagi", "Akita", "Yamagata", "Fukushima", "Ibaraki", "Tochigi", "Gunma", "Saitama", "Chiba", "Tokyo", "Kanagawa", "Niigata", "Toyama", "Ishikawa", "Fukui", "Yamanashi", "Nagano", "Gifu", "Shizuoka", "Aichi", "Mie", "Shiga", "Kyoto", "Osaka", "Hyogo", "Nara", "Wakayama", "Tottori", "Shimane", "Okayama", "Hiroshima", "Yamaguchi", "Tokushima", "Kagawa", "Ehime", "Kochi", "Fukuoka", "Saga", "Nagasaki", "Kumamoto", "Oita", "Miyazaki", "Kagoshima", "Okinawa"
+        ];
+        const koreaNorthstateList = ["Chagang", "North Hamgyong", "South Hamgyong", "North Hwanghae", "South Hwanghae", "Kangwon", "North Pyongan", "South Pyongan", "Ryanggang", "Pyongyang", "Rason", "Nampo"
+        ];
+        const MaldivesstateList = ["Addu City", "Seenu Atoll", "Haa Alif Atoll", "Haa Dhaalu Atoll", "Shaviyani Atoll", "Noonu Atoll", "Raa Atoll", "Baa Atoll", "Lhaviyani Atoll", "Kaafu Atoll", "Alif Alif Atoll", "Alif Dhaalu Atoll", "Vaavu Atoll", "Meemu Atoll", "Faafu Atoll", "Dhaalu Atoll", "Thaa Atoll", "Laamu Atoll", "Gaafu Alif Atoll", "Gaafu Dhaalu Atoll", "Gnaviyani Atoll"
+        ];
+        const SingaporestateList = [];
+        const SwitzerlandstateList = [];
+
+
+        let str = '<select name="" id="selectElementCountriesId">Please Select Your Country';
+        for (let i = 0; i < countriesList.length; i++) {
+            if (countriesList[i] == "India") {
+
+                str = str + '<option value="" selected>' + countriesList[i] + '</option>';
+            } else {
+                str = str + '<option value="">' + countriesList[i] + '</option>';
+            }
+        }
+        str = str + '</select>';
+        document.getElementById('countriesId').innerHTML = str;
+
+
+
+        document.getElementById('selectElementCountriesId').addEventListener('change', () => {
+            var e = document.getElementById("selectElementCountriesId");
+            // var value = e.value;
+            var text = e.options[e.selectedIndex].text;
+
+            console.log(e.options[e.selectedIndex]);
+
+            if (text == "India") {
+
+
+                let str = '<select name="">';
+                for (let i = 0; i < indiastateList.length; i++) {
+                    if (indiastateList[i] == "Haryana") {
+                        str = str + '<option value="" selected>' + indiastateList[i] + '</option>';
+                    } else {
+                        str = str + '<option value="">' + indiastateList[i] + '</option>';
+                    }
+                }
+                str = str + '</select>';
+                document.getElementById('stateId').innerHTML = str;
+
+
+            } else if (text == "Brazil") {
+
+                let str = '<select name="">';
+                for (let i = 0; i < brazilstateList.length; i++) {
+                    if (brazilstateList[i] == "Haryana") {
+                        str = str + '<option value="" selected>' + brazilstateList[i] + '</option>';
+                    } else {
+                        str = str + '<option value="">' + brazilstateList[i] + '</option>';
+                    }
+                }
+                str = str + '</select>';
+                document.getElementById('stateId').innerHTML = str;
+
+            }
+            else if (text == "Canada") {
+
+                let str = '<select name="">';
+                for (let i = 0; i < canadastateList.length; i++) {
+                    if (canadastateList[i] == "Haryana") {
+                        str = str + '<option value="" selected>' + canadastateList[i] + '</option>';
+                    } else {
+                        str = str + '<option value="">' + canadastateList[i] + '</option>';
+                    }
+                }
+                str = str + '</select>';
+                document.getElementById('stateId').innerHTML = str;
+
+            }
+            else if (text == "Germany") {
+
+                let str = '<select name="">';
+                for (let i = 0; i < germanystateList.length; i++) {
+                    if (germanystateList[i] == "Haryana") {
+                        str = str + '<option value="" selected>' + germanystateList[i] + '</option>';
+                    } else {
+                        str = str + '<option value="">' + germanystateList[i] + '</option>';
+                    }
+                }
+                str = str + '</select>';
+                document.getElementById('stateId').innerHTML = str;
+
+            }
+            else if (text == "Italy") {
+
+                let str = '<select name="">';
+                for (let i = 0; i < italystateList.length; i++) {
+                    if (italystateList[i] == "Haryana") {
+                        str = str + '<option value="" selected>' + italystateList[i] + '</option>';
+                    } else {
+                        str = str + '<option value="">' + italystateList[i] + '</option>';
+                    }
+                }
+                str = str + '</select>';
+                document.getElementById('stateId').innerHTML = str;
+
+            }
+            else if (text == "Japan") {
+
+                let str = '<select name="">';
+                for (let i = 0; i < japanstateList.length; i++) {
+                    if (japanstateList[i] == "Haryana") {
+                        str = str + '<option value="" selected>' + japanstateList[i] + '</option>';
+                    } else {
+                        str = str + '<option value="">' + japanstateList[i] + '</option>';
+                    }
+                }
+                str = str + '</select>';
+                document.getElementById('stateId').innerHTML = str;
+
+            }
+            else if (text == "Korea North") {
+
+                let str = '<select name="">';
+                for (let i = 0; i < koreaNorthstateList.length; i++) {
+                    if (koreaNorthstateList[i] == "Haryana") {
+                        str = str + '<option value="" selected>' + koreaNorthstateList[i] + '</option>';
+                    } else {
+                        str = str + '<option value="">' + koreaNorthstateList[i] + '</option>';
+                    }
+                }
+                str = str + '</select>';
+                document.getElementById('stateId').innerHTML = str;
+
+            }
+            else if (text == "Maldives") {
+
+                let str = '<select name="">';
+                for (let i = 0; i < MaldivesstateList.length; i++) {
+                    if (MaldivesstateList[i] == "Haryana") {
+                        str = str + '<option value="" selected>' + MaldivesstateList[i] + '</option>';
+                    } else {
+                        str = str + '<option value="">' + MaldivesstateList[i] + '</option>';
+                    }
+                }
+                str = str + '</select>';
+                document.getElementById('stateId').innerHTML = str;
+
+            }
+            else {
+                document.getElementById('stateId').innerHTML = "";
+
+            }
+        });
+    </script>
+</body>
+
+</html>
